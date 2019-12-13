@@ -1,7 +1,7 @@
 language: java
 
 jdk:
-  - oraclejdk8
+  - openjdk8
 
 before_install:
   - echo 'before_install'
@@ -9,3 +9,6 @@ before_install:
 script:
   - mvn clean compile install -DskipTests=true -Dmaven.javadoc.skip=true
   - mvn test
+
+after_script:
+  - echo 'after_script'
